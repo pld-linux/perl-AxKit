@@ -11,7 +11,7 @@ Name:		perl-AxKit
 %define		_axver	1.62
 Version:	1.6.2
 Release:	1
-License:	Artistic or GPL
+License:	GPL v2 or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 # Source0-md5:	1634ad62ac941c7d2ee3b1a2d129c14a
