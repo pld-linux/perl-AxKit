@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Apache
 %define		pnam	AxKit
-Summary:	AxKit - The Apache XML Delivery Toolkit
+Summary:	AxKit - the Apache XML delivery toolkit
 Summary(pl):	AxKit - narzêdzia dostarczaj±ce XML dla Apache'a
 Name:		perl-AxKit
 %define		_axver	1.62
