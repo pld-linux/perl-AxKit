@@ -222,7 +222,7 @@ Modu³ jêzykowy XSP do AxKitu - "Rozszerzalne Strony Serwera".
 %setup -q -n %{pnam}-%{_axver}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 # some problem with XML constants - broken test ?
