@@ -10,7 +10,7 @@ Summary(pl):	AxKit - narzêdzia dostarczaj±ce XML dla Apache'a
 Name:		perl-AxKit
 %define		_axver	1.61
 Version:	1.6.1
-Release:	3
+Release:	4
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
@@ -40,12 +40,11 @@ BuildRequires:	rpm-perlprov >= 4.0.2-104
 Requires:	apache-mod_perl >= 1.17
 Requires:	perl-Digest-MD5 >= 2.09
 Requires:	perl-libapreq >= 0.32
+BuildConflicts:	perl-Attribute-Persistent < 1.0-3
 BuildConflicts:	perl-XML-LibXML = 1.53
 Conflicts:	perl-HTTP-GHTTP < 1.00
 Conflicts:	perl-XML-LibXML = 1.53
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_noautoreqdep	'perl(UNIVERSAL)'
 
 %description
 The Apache XML Delivery Toolkit (AxKit) is a suite of tools for the
