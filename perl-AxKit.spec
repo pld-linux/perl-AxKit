@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _with_tests - perform "make test"
+%bcond_with	tests	# perform "make test" (requires server)
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Apache
@@ -8,26 +8,27 @@
 Summary:	AxKit - The Apache XML Delivery Toolkit
 Summary(pl):	AxKit - narzêdzia dostarczaj±ce XML dla Apache'a
 Name:		perl-AxKit
-%define		_axver	1.61
-Version:	1.6.1
-Release:	5
+%define		_axver	1.62
+Version:	1.6.2
+Release:	1
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	94b8149a9bf5337ce98d78629793c1b2
+# Source0-md5:	1634ad62ac941c7d2ee3b1a2d129c14a
 URL:		http://axkit.org/
-%if %{!?_with_tests:0}%{?_with_tests:1}
-BuildRequires:	perl-Apache-Filter
-%endif
 BuildRequires:	apache-mod_perl >= 1.17
 BuildRequires:	libxml2-devel
+%if %{with tests}
+BuildRequires:	perl-Apache-Filter
+%endif
+BuildRequires:	perl-Apache-Test >= 1.00
 BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-DBI
 BuildRequires:	perl-Digest-MD5 >= 2.09
 BuildRequires:	perl-Error >= 0.14
 BuildRequires:	perl-IPC-Run
 BuildRequires:	perl-XML-Handler-AxPoint
-BuildRequires:	perl-XML-LibXML-SAX >= 1.50
+BuildRequires:	perl-XML-LibXML-SAX >= 1.51
 BuildRequires:	perl-XML-LibXSLT >= 1.49
 BuildRequires:	perl-XML-Parser >= 2.27
 BuildRequires:	perl-XML-SAX-Writer
@@ -37,6 +38,7 @@ BuildRequires:	perl-XMLNews-HTMLTemplate
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	perl-libapreq >= 0.32
 BuildRequires:	perl-libxml-enno
+BuildRequires:	perltidy
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 Requires:	apache-mod_perl >= 1.17
 Requires:	perl-Digest-MD5 >= 2.09
@@ -223,11 +225,13 @@ Modu³ jêzykowy XSP do AxKitu - "Rozszerzalne Strony Serwera".
 %setup -q -n %{pnam}-%{_axver}
 
 %build
-%{__perl} Makefile.PL
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
 
 # some problem with XML constants - broken test ?
-%{?_with_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -244,72 +248,73 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CONTRIB Changes README SUPPORT TODO axkit.org
-%{perl_sitearch}/AxKit.pm
-%dir %{perl_sitearch}/Apache/AxKit
-%{perl_sitearch}/Apache/AxKit/*.pm
-%dir %{perl_sitearch}/Apache/AxKit/Language
-%{perl_sitearch}/Apache/AxKit/MediaChooser
-%dir %{perl_sitearch}/Apache/AxKit/Plugin
-%{perl_sitearch}/Apache/AxKit/Plugin/[^F]*.pm
-%{perl_sitearch}/Apache/AxKit/Provider
-%{perl_sitearch}/Apache/AxKit/StyleChooser
-%dir %{perl_sitearch}/auto/AxKit
-%{perl_sitearch}/auto/AxKit/*.bs
-%attr(755,root,root) %{perl_sitearch}/auto/AxKit/*.so
-%dir %{perl_sitearch}/auto/Apache/AxKit/CharsetConv
-%{perl_sitearch}/auto/Apache/AxKit/CharsetConv/*.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Apache/AxKit/CharsetConv/*.so
+%{perl_vendorarch}/AxKit.pm
+%dir %{perl_vendorarch}/Apache/AxKit
+%{perl_vendorarch}/Apache/AxKit/*.pm
+%dir %{perl_vendorarch}/Apache/AxKit/Language
+%{perl_vendorarch}/Apache/AxKit/MediaChooser
+%dir %{perl_vendorarch}/Apache/AxKit/Plugin
+%{perl_vendorarch}/Apache/AxKit/Plugin/[!F]*.pm
+%{perl_vendorarch}/Apache/AxKit/Provider
+%{perl_vendorarch}/Apache/AxKit/StyleChooser
+%dir %{perl_vendorarch}/auto/AxKit
+%{perl_vendorarch}/auto/AxKit/*.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/AxKit/*.so
+%dir %{perl_vendorarch}/auto/Apache/AxKit/CharsetConv
+%{perl_vendorarch}/auto/Apache/AxKit/CharsetConv/*.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Apache/AxKit/CharsetConv/*.so
 %{_mandir}/man3/AxKit.3pm*
-%{_mandir}/man3/Apache::AxKit::[^LP]*
+%{_mandir}/man3/Apache::AxKit::[!LP]*
 %{_mandir}/man3/Apache::AxKit::Language.3pm*
+%{_mandir}/man3/Apache::AxKit::LibXMLSupport.3pm*
 %{_mandir}/man3/Apache::AxKit::Provider*
-%{_mandir}/man3/Apache::AxKit::Plugin::[^F]*
+%{_mandir}/man3/Apache::AxKit::Plugin::[!F]*
 %{_examplesdir}/%{name}-%{version}
 
 %files Language-AxPoint
 %defattr(644,root,root,755)
-%{perl_sitearch}/Apache/AxKit/Language/AxPoint.pm
+%{perl_vendorarch}/Apache/AxKit/Language/AxPoint.pm
 %{_mandir}/man3/Apache::AxKit::Language::AxPoint.3pm*
 
 %files Language-HtmlDoc
 %defattr(644,root,root,755)
-%{perl_sitearch}/Apache/AxKit/Language/HtmlDoc.pm
+%{perl_vendorarch}/Apache/AxKit/Language/HtmlDoc.pm
 %{_mandir}/man3/Apache::AxKit::Language::HtmlDoc.3pm*
 
 %files Language-LibXSLT
 %defattr(644,root,root,755)
-%{perl_sitearch}/Apache/AxKit/Language/LibXSLT.pm
+%{perl_vendorarch}/Apache/AxKit/Language/LibXSLT.pm
 
 %files Language-PassiveTeX
 %defattr(644,root,root,755)
-%{perl_sitearch}/Apache/AxKit/Language/PassiveTeX.pm
+%{perl_vendorarch}/Apache/AxKit/Language/PassiveTeX.pm
 
 %files Language-Query
 %defattr(644,root,root,755)
-%{perl_sitearch}/Apache/AxKit/Language/Query.pm
+%{perl_vendorarch}/Apache/AxKit/Language/Query.pm
 
 %files Language-SAXMachines
 %defattr(644,root,root,755)
-%{perl_sitearch}/Apache/AxKit/Language/SAXMachines.pm
+%{perl_vendorarch}/Apache/AxKit/Language/SAXMachines.pm
 %{_mandir}/man3/Apache::AxKit::Language::SAXMachines.3pm*
 
 %files Language-Sablot
 %defattr(644,root,root,755)
-%{perl_sitearch}/Apache/AxKit/Language/Sablot.pm
+%{perl_vendorarch}/Apache/AxKit/Language/Sablot.pm
 
 %files Language-XMLNews
 %defattr(644,root,root,755)
-%{perl_sitearch}/Apache/AxKit/Language/XMLNews*.pm
+%{perl_vendorarch}/Apache/AxKit/Language/XMLNews*.pm
 
 %files Language-XPathScript
 %defattr(644,root,root,755)
-%{perl_sitearch}/Apache/AxKit/Language/XPathScript.pm
-%{perl_sitearch}/Apache/AxKit/Plugin/Fragment.pm
+%{perl_vendorarch}/Apache/AxKit/Language/XPathScript.pm
+%{perl_vendorarch}/Apache/AxKit/Plugin/Fragment.pm
 %{_mandir}/man3/Apache::AxKit::Language::XPathScript.3pm*
 %{_mandir}/man3/Apache::AxKit::Plugin::Fragment.3pm*
 
 %files Language-XSP
 %defattr(644,root,root,755)
-%{perl_sitearch}/Apache/AxKit/Language/XSP.pm
-%{perl_sitearch}/Apache/AxKit/Language/XSP
+%{perl_vendorarch}/Apache/AxKit/Language/XSP.pm
+%{perl_vendorarch}/Apache/AxKit/Language/XSP
 %{_mandir}/man3/Apache::AxKit::Language::XSP*
