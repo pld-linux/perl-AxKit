@@ -37,7 +37,7 @@ BuildRequires:	perl-XML-XPath >= 1.00
 BuildRequires:	perl-XMLNews-HTMLTemplate
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-libapreq >= 0.32
-BuildRequires:	perl-libxml-enno
+BuildRequires:	perl-XML-DOM
 BuildRequires:	perltidy
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 Requires:	apache-mod_perl >= 1.17
