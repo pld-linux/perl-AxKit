@@ -10,7 +10,7 @@ Summary(pl):	AxKit - narzêdzia dostarczaj±ce XML dla Apache'a
 Name:		perl-AxKit
 %define		_axver	1.61
 Version:	1.6.1
-Release:	4
+Release:	5
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
