@@ -14,6 +14,7 @@ Release:	5
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
+# Source0-md5:	94b8149a9bf5337ce98d78629793c1b2
 URL:		http://axkit.org/
 %if %{!?_with_tests:0}%{?_with_tests:1}
 BuildRequires:	perl-Apache-Filter
