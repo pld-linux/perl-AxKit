@@ -35,7 +35,7 @@ BuildRequires:	perl-XML-SAX-Writer
 BuildRequires:	perl-XML-Sablotron >= 0.40
 BuildRequires:	perl-XML-XPath >= 1.00
 BuildRequires:	perl-XMLNews-HTMLTemplate
-BuildRequires:	perl-devel >= 5.6
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-libapreq >= 0.32
 BuildRequires:	perl-libxml-enno
 BuildRequires:	perltidy
