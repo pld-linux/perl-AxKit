@@ -10,7 +10,7 @@ Summary(pl):	AxKit - narzêdzia dostarczaj±ce XML dla Apache'a
 Name:		perl-AxKit
 %define		_axver	1.61
 Version:	1.6.1
-Release:	2
+Release:	3
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
@@ -36,7 +36,7 @@ BuildRequires:	perl-XMLNews-HTMLTemplate
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	perl-libapreq >= 0.32
 BuildRequires:	perl-libxml-enno
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.0.2-104
 Requires:	apache-mod_perl >= 1.17
 Requires:	perl-Digest-MD5 >= 2.09
 Requires:	perl-libapreq >= 0.32
