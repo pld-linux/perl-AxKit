@@ -62,7 +62,7 @@ stylesheet systems, should they so desire.
 %description -l pl
 AxKit (Apache XML Delivery Toolkit) to zestaw narzêdzi dla serwera
 Apache z dzia³aj±cym modu³em mod_perl, daj±cy programistom bardzo
-elastyczne mo¿liwo¶ci dostarczania XML do wszystkich rodzajów
+elastyczne mo¿liwo¶ci dostarczania XML-a do wszystkich rodzajów
 przegl±darek: z palmtopów, czytników Braille'a, zwyk³ych przegl±darek.
 Wszystko to mo¿na osi±gn±æ przy pomocy samych standardów W3C, ale
 architektura wtycznek udostêpnia programistom punkty zaczepienia
@@ -162,13 +162,13 @@ process. Instead, the SAX filters are added via config directives in
 your .htaccess or *.conf file.
 
 %description Language-SAXMachines -l pl
+
 Modu³ Language::SAXMachines udostêpnia ³atwy sposób (poprzez modu³
 XML::SAX::Machines Barrie Slaymakera) na u¿yawnie ³añcuchów filtrów
-SAX do przekszta³cania zawarto¶ci XML. Technicznie nie jest to "jêzyk"
-w takim sensie jak XSP, XPathScript czy XSLT, poniewa¿ nie ma arkuszy
-styli do zapisywania ani przetwarzania. Zamiast tego filtry SAX s±
-dodawane poprzez dyrektywy konfiguracyjne w plikach .htaccess lub
-*.conf.
+SAX do przekszta³cania XML-a. Technicznie nie jest to "jêzyk" w takim
+sensie jak XSP, XPathScript czy XSLT, poniewa¿ nie ma arkuszy styli do
+zapisywania ani przetwarzania. Zamiast tego filtry SAX s± dodawane
+poprzez dyrektywy konfiguracyjne w plikach .htaccess lub *.conf.
 
 %package Language-Sablot
 Summary:	Sablot module for AxKit
