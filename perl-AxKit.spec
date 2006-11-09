@@ -5,10 +5,10 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Apache
 %define		pnam	AxKit
+%define		_axver	1.62
 Summary:	AxKit - the Apache XML delivery toolkit
 Summary(pl):	AxKit - narzêdzia dostarczaj±ce XML dla Apache'a
 Name:		perl-AxKit
-%define		_axver	1.62
 Version:	1.6.2
 Release:	1
 License:	GPL v2 or Artistic
@@ -27,6 +27,7 @@ BuildRequires:	perl-DBI
 BuildRequires:	perl-Digest-MD5 >= 2.09
 BuildRequires:	perl-Error >= 0.14
 BuildRequires:	perl-IPC-Run
+BuildRequires:	perl-XML-DOM
 BuildRequires:	perl-XML-Handler-AxPoint
 BuildRequires:	perl-XML-LibXML-SAX >= 1.51
 BuildRequires:	perl-XML-LibXSLT >= 1.49
@@ -37,13 +38,12 @@ BuildRequires:	perl-XML-XPath >= 1.00
 BuildRequires:	perl-XMLNews-HTMLTemplate
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-libapreq >= 0.32
-BuildRequires:	perl-XML-DOM
 BuildRequires:	perltidy
 BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildConflicts:	perl-XML-LibXML = 1.53
 Requires:	apache-mod_perl >= 1.17
 Requires:	perl-Digest-MD5 >= 2.09
 Requires:	perl-libapreq >= 0.32
-BuildConflicts:	perl-XML-LibXML = 1.53
 Conflicts:	perl-HTTP-GHTTP < 1.00
 Conflicts:	perl-XML-LibXML = 1.53
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -72,7 +72,7 @@ pozwalaj±ce na pisanie w³asnych systemów stylów.
 Summary:	AxPoint - an AxKit PDF Slideshow generator
 Summary(pl):	AxPoint - generator slajdów PDF do AxKitu
 Group:		Development/Languages/Perl
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description Language-AxPoint
 AxPoint allows you to create PDF slideshows or presentations using an
@@ -86,7 +86,7 @@ definicji XML.
 Summary:	HtmlDoc module for AxKit - deliver XHTML as PDF
 Summary(pl):	Modu³ HtmlDoc do AxKitu - dostarczajacy XHTML jako PDF
 Group:		Development/Languages/Perl
-Requires:	%{name}-Language-LibXSLT = %{version}
+Requires:	%{name}-Language-LibXSLT = %{version}-%{release}
 Requires:	htmldoc
 
 %description Language-HtmlDoc
@@ -109,7 +109,7 @@ aby osi±gn±æ ³adne wyniki.
 Summary:	LibXSLT module for AxKit
 Summary(pl):	Modu³ LibXSLT do AxKitu
 Group:		Development/Languages/Perl
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	perl-XML-LibXSLT >= 1.49
 
 %description Language-LibXSLT
@@ -122,7 +122,7 @@ Modu³ LibXSLT do AxKitu.
 Summary:	PassiveTeX module for AxKit
 Summary(pl):	Modu³ PassiveTeX do AxKitu
 Group:		Development/Languages/Perl
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	passivetex
 
 %description Language-PassiveTeX
@@ -135,7 +135,7 @@ Modu³ PassiveTeX do AxKitu.
 Summary:	Query module for AxKit
 Summary(pl):	Modu³ Query do AxKitu
 Group:		Development/Languages/Perl
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description Language-Query
 Query module for AxKit.
@@ -147,7 +147,7 @@ Modu³ Query do AxKitu.
 Summary:	SAXMachines module for AxKit - transform content with SAX Filters
 Summary(pl):	Modu³ SAXMachines do AxKitu - przepuszczaj±cy zawarto¶æ przez filtry SAX
 Group:		Development/Languages/Perl
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	perl-XML-LibXML-SAX >= 1.50
 Requires:	perl-XML-LibXSLT >= 1.49
 # not found by perl.req???
@@ -174,7 +174,7 @@ poprzez dyrektywy konfiguracyjne w plikach .htaccess lub *.conf.
 Summary:	Sablot module for AxKit
 Summary(pl):	Modu³ Sablot do AxKitu
 Group:		Development/Languages/Perl
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description Language-Sablot
 Sablot module for AxKit.
@@ -186,7 +186,7 @@ Modu³ Sablot do AxKitu.
 Summary:	XMLNews modules for AxKit
 Summary(pl):	Modu³y XMLNews do AxKitu
 Group:		Development/Languages/Perl
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description Language-XMLNews
 XMLNews modules (XMLNewsNITF and XMLNewsRDF) for AxKit.
@@ -198,7 +198,7 @@ Modu³y XMLNews (XMLNewsNITF i XMLNewsRDF) do AxKitu.
 Summary:	XPathScript language module for AxKit
 Summary(pl):	Modu³ jêzyka XPathScript do AxKitu
 Group:		Development/Languages/Perl
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	perl-XML-Parser >= 2.27
 Requires:	perl-XML-XPath >= 1.00
 
@@ -212,7 +212,7 @@ Modu³ jêzyka XPathScript do AxKitu.
 Summary:	XSP language module for AxKit - eXtensible Server Pages
 Summary(pl):	Modu³ jêzykowy XSP do AxKitu
 Group:		Development/Languages/Perl
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	perl-XML-LibXML >= 1.50
 
 %description Language-XSP
