@@ -7,7 +7,7 @@
 %define		pnam	AxKit
 %define		_axver	1.62
 Summary:	AxKit - the Apache XML delivery toolkit
-Summary(pl):	AxKit - narzêdzia dostarczaj±ce XML dla Apache'a
+Summary(pl.UTF-8):   AxKit - narzÄ™dzia dostarczajÄ…ce XML dla Apache'a
 Name:		perl-AxKit
 Version:	1.6.2
 Release:	1
@@ -59,18 +59,18 @@ be achieved using nothing but W3C standards, although the plugin
 architecture provides the hooks for developers to write their own
 stylesheet systems, should they so desire.
 
-%description -l pl
-AxKit (Apache XML Delivery Toolkit) to zestaw narzêdzi dla serwera
-Apache z dzia³aj±cym modu³em mod_perl, daj±cy programistom bardzo
-elastyczne mo¿liwo¶ci dostarczania XML-a do wszystkich rodzajów
-przegl±darek: z palmtopów, czytników Braille'a, zwyk³ych przegl±darek.
-Wszystko to mo¿na osi±gn±æ przy pomocy samych standardów W3C, ale
-architektura wtycznek udostêpnia programistom punkty zaczepienia
-pozwalaj±ce na pisanie w³asnych systemów stylów.
+%description -l pl.UTF-8
+AxKit (Apache XML Delivery Toolkit) to zestaw narzÄ™dzi dla serwera
+Apache z dziaÅ‚ajÄ…cym moduÅ‚em mod_perl, dajÄ…cy programistom bardzo
+elastyczne moÅ¼liwoÅ›ci dostarczania XML-a do wszystkich rodzajÃ³w
+przeglÄ…darek: z palmtopÃ³w, czytnikÃ³w Braille'a, zwykÅ‚ych przeglÄ…darek.
+Wszystko to moÅ¼na osiÄ…gnÄ…Ä‡ przy pomocy samych standardÃ³w W3C, ale
+architektura wtycznek udostÄ™pnia programistom punkty zaczepienia
+pozwalajÄ…ce na pisanie wÅ‚asnych systemÃ³w stylÃ³w.
 
 %package Language-AxPoint
 Summary:	AxPoint - an AxKit PDF Slideshow generator
-Summary(pl):	AxPoint - generator slajdów PDF do AxKitu
+Summary(pl.UTF-8):   AxPoint - generator slajdÃ³w PDF do AxKitu
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 
@@ -78,13 +78,13 @@ Requires:	%{name} = %{version}-%{release}
 AxPoint allows you to create PDF slideshows or presentations using an
 XML definition of the slideshow.
 
-%description Language-AxPoint -l pl
-AxPoint pozwala na tworzenie slajdów lub prezentacji PDF przy u¿yciu
+%description Language-AxPoint -l pl.UTF-8
+AxPoint pozwala na tworzenie slajdÃ³w lub prezentacji PDF przy uÅ¼yciu
 definicji XML.
 
 %package Language-HtmlDoc
 Summary:	HtmlDoc module for AxKit - deliver XHTML as PDF
-Summary(pl):	Modu³ HtmlDoc do AxKitu - dostarczajacy XHTML jako PDF
+Summary(pl.UTF-8):   ModuÅ‚ HtmlDoc do AxKitu - dostarczajacy XHTML jako PDF
 Group:		Development/Languages/Perl
 Requires:	%{name}-Language-LibXSLT = %{version}-%{release}
 Requires:	htmldoc
@@ -97,17 +97,17 @@ understand CSS and only some HTML 4.0 (as of version 1.8.18). Using an
 extra XSLT stylesheet, it isn't all that hard to create HTMLDOC
 friendly input and you get nice results.
 
-%description Language-HtmlDoc -l pl
-Modu³ HtmlDoc pozwala na konwertowanie stron XHTML na dosyæ ³adnie
-wygl±daj±ce dokumenty PDF. Trzeba jednak uwa¿aæ na wej¶ciowy XHTML,
-poniewa¿ HTMLDOC rozumie tylko HTML 3.2, nie obs³uguje CSS i czê¶ci
-HTML 4.0 (stan z wersji 1.8.18). Ale przy u¿yciu dodatkowego arkusza
-XSLT nie jest trudne przygotowanie odpowiedniego wej¶cia dla HTMLDOC,
-aby osi±gn±æ ³adne wyniki.
+%description Language-HtmlDoc -l pl.UTF-8
+ModuÅ‚ HtmlDoc pozwala na konwertowanie stron XHTML na dosyÄ‡ Å‚adnie
+wyglÄ…dajÄ…ce dokumenty PDF. Trzeba jednak uwaÅ¼aÄ‡ na wejÅ›ciowy XHTML,
+poniewaÅ¼ HTMLDOC rozumie tylko HTML 3.2, nie obsÅ‚uguje CSS i czÄ™Å›ci
+HTML 4.0 (stan z wersji 1.8.18). Ale przy uÅ¼yciu dodatkowego arkusza
+XSLT nie jest trudne przygotowanie odpowiedniego wejÅ›cia dla HTMLDOC,
+aby osiÄ…gnÄ…Ä‡ Å‚adne wyniki.
 
 %package Language-LibXSLT
 Summary:	LibXSLT module for AxKit
-Summary(pl):	Modu³ LibXSLT do AxKitu
+Summary(pl.UTF-8):   ModuÅ‚ LibXSLT do AxKitu
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 Requires:	perl-XML-LibXSLT >= 1.49
@@ -115,12 +115,12 @@ Requires:	perl-XML-LibXSLT >= 1.49
 %description Language-LibXSLT
 LibXSLT module for AxKit.
 
-%description Language-LibXSLT -l pl
-Modu³ LibXSLT do AxKitu.
+%description Language-LibXSLT -l pl.UTF-8
+ModuÅ‚ LibXSLT do AxKitu.
 
 %package Language-PassiveTeX
 Summary:	PassiveTeX module for AxKit
-Summary(pl):	Modu³ PassiveTeX do AxKitu
+Summary(pl.UTF-8):   ModuÅ‚ PassiveTeX do AxKitu
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 Requires:	passivetex
@@ -128,24 +128,24 @@ Requires:	passivetex
 %description Language-PassiveTeX
 PassiveTeX module for AxKit.
 
-%description Language-PassiveTeX -l pl
-Modu³ PassiveTeX do AxKitu.
+%description Language-PassiveTeX -l pl.UTF-8
+ModuÅ‚ PassiveTeX do AxKitu.
 
 %package Language-Query
 Summary:	Query module for AxKit
-Summary(pl):	Modu³ Query do AxKitu
+Summary(pl.UTF-8):   ModuÅ‚ Query do AxKitu
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 
 %description Language-Query
 Query module for AxKit.
 
-%description Language-Query -l pl
-Modu³ Query do AxKitu.
+%description Language-Query -l pl.UTF-8
+ModuÅ‚ Query do AxKitu.
 
 %package Language-SAXMachines
 Summary:	SAXMachines module for AxKit - transform content with SAX Filters
-Summary(pl):	Modu³ SAXMachines do AxKitu - przepuszczaj±cy zawarto¶æ przez filtry SAX
+Summary(pl.UTF-8):   ModuÅ‚ SAXMachines do AxKitu - przepuszczajÄ…cy zawartoÅ›Ä‡ przez filtry SAX
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 Requires:	perl-XML-LibXML-SAX >= 1.50
@@ -161,42 +161,42 @@ XPathScript, or XSLT are since there is no stylesheet to write or
 process. Instead, the SAX filters are added via config directives in
 your .htaccess or *.conf file.
 
-%description Language-SAXMachines -l pl
+%description Language-SAXMachines -l pl.UTF-8
 
-Modu³ Language::SAXMachines udostêpnia ³atwy sposób (poprzez modu³
-XML::SAX::Machines Barrie Slaymakera) na u¿yawnie ³añcuchów filtrów
-SAX do przekszta³cania XML-a. Technicznie nie jest to "jêzyk" w takim
-sensie jak XSP, XPathScript czy XSLT, poniewa¿ nie ma arkuszy styli do
-zapisywania ani przetwarzania. Zamiast tego filtry SAX s± dodawane
+ModuÅ‚ Language::SAXMachines udostÄ™pnia Å‚atwy sposÃ³b (poprzez moduÅ‚
+XML::SAX::Machines Barrie Slaymakera) na uÅ¼yawnie Å‚aÅ„cuchÃ³w filtrÃ³w
+SAX do przeksztaÅ‚cania XML-a. Technicznie nie jest to "jÄ™zyk" w takim
+sensie jak XSP, XPathScript czy XSLT, poniewaÅ¼ nie ma arkuszy styli do
+zapisywania ani przetwarzania. Zamiast tego filtry SAX sÄ… dodawane
 poprzez dyrektywy konfiguracyjne w plikach .htaccess lub *.conf.
 
 %package Language-Sablot
 Summary:	Sablot module for AxKit
-Summary(pl):	Modu³ Sablot do AxKitu
+Summary(pl.UTF-8):   ModuÅ‚ Sablot do AxKitu
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 
 %description Language-Sablot
 Sablot module for AxKit.
 
-%description Language-Sablot -l pl
-Modu³ Sablot do AxKitu.
+%description Language-Sablot -l pl.UTF-8
+ModuÅ‚ Sablot do AxKitu.
 
 %package Language-XMLNews
 Summary:	XMLNews modules for AxKit
-Summary(pl):	Modu³y XMLNews do AxKitu
+Summary(pl.UTF-8):   ModuÅ‚y XMLNews do AxKitu
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 
 %description Language-XMLNews
 XMLNews modules (XMLNewsNITF and XMLNewsRDF) for AxKit.
 
-%description Language-XMLNews -l pl
-Modu³y XMLNews (XMLNewsNITF i XMLNewsRDF) do AxKitu.
+%description Language-XMLNews -l pl.UTF-8
+ModuÅ‚y XMLNews (XMLNewsNITF i XMLNewsRDF) do AxKitu.
 
 %package Language-XPathScript
 Summary:	XPathScript language module for AxKit
-Summary(pl):	Modu³ jêzyka XPathScript do AxKitu
+Summary(pl.UTF-8):   ModuÅ‚ jÄ™zyka XPathScript do AxKitu
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 Requires:	perl-XML-Parser >= 2.27
@@ -205,12 +205,12 @@ Requires:	perl-XML-XPath >= 1.00
 %description Language-XPathScript
 XPathScript language module for AxKit.
 
-%description Language-XPathScript -l pl
-Modu³ jêzyka XPathScript do AxKitu.
+%description Language-XPathScript -l pl.UTF-8
+ModuÅ‚ jÄ™zyka XPathScript do AxKitu.
 
 %package Language-XSP
 Summary:	XSP language module for AxKit - eXtensible Server Pages
-Summary(pl):	Modu³ jêzykowy XSP do AxKitu
+Summary(pl.UTF-8):   ModuÅ‚ jÄ™zykowy XSP do AxKitu
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 Requires:	perl-XML-LibXML >= 1.50
@@ -218,8 +218,8 @@ Requires:	perl-XML-LibXML >= 1.50
 %description Language-XSP
 XSP language module for AxKit - eXtensible Server Pages.
 
-%description Language-XSP -l pl
-Modu³ jêzykowy XSP do AxKitu - "Rozszerzalne Strony Serwera".
+%description Language-XSP -l pl.UTF-8
+ModuÅ‚ jÄ™zykowy XSP do AxKitu - "Rozszerzalne Strony Serwera".
 
 %prep
 %setup -q -n %{pnam}-%{_axver}
