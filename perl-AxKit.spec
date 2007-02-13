@@ -7,7 +7,7 @@
 %define		pnam	AxKit
 %define		_axver	1.62
 Summary:	AxKit - the Apache XML delivery toolkit
-Summary(pl.UTF-8):   AxKit - narzędzia dostarczające XML dla Apache'a
+Summary(pl.UTF-8):	AxKit - narzędzia dostarczające XML dla Apache'a
 Name:		perl-AxKit
 Version:	1.6.2
 Release:	1
@@ -70,7 +70,7 @@ pozwalające na pisanie własnych systemów stylów.
 
 %package Language-AxPoint
 Summary:	AxPoint - an AxKit PDF Slideshow generator
-Summary(pl.UTF-8):   AxPoint - generator slajdów PDF do AxKitu
+Summary(pl.UTF-8):	AxPoint - generator slajdów PDF do AxKitu
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 
@@ -84,7 +84,7 @@ definicji XML.
 
 %package Language-HtmlDoc
 Summary:	HtmlDoc module for AxKit - deliver XHTML as PDF
-Summary(pl.UTF-8):   Moduł HtmlDoc do AxKitu - dostarczajacy XHTML jako PDF
+Summary(pl.UTF-8):	Moduł HtmlDoc do AxKitu - dostarczajacy XHTML jako PDF
 Group:		Development/Languages/Perl
 Requires:	%{name}-Language-LibXSLT = %{version}-%{release}
 Requires:	htmldoc
@@ -107,7 +107,7 @@ aby osiągnąć ładne wyniki.
 
 %package Language-LibXSLT
 Summary:	LibXSLT module for AxKit
-Summary(pl.UTF-8):   Moduł LibXSLT do AxKitu
+Summary(pl.UTF-8):	Moduł LibXSLT do AxKitu
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 Requires:	perl-XML-LibXSLT >= 1.49
@@ -120,7 +120,7 @@ Moduł LibXSLT do AxKitu.
 
 %package Language-PassiveTeX
 Summary:	PassiveTeX module for AxKit
-Summary(pl.UTF-8):   Moduł PassiveTeX do AxKitu
+Summary(pl.UTF-8):	Moduł PassiveTeX do AxKitu
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 Requires:	passivetex
@@ -133,7 +133,7 @@ Moduł PassiveTeX do AxKitu.
 
 %package Language-Query
 Summary:	Query module for AxKit
-Summary(pl.UTF-8):   Moduł Query do AxKitu
+Summary(pl.UTF-8):	Moduł Query do AxKitu
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 
@@ -145,7 +145,7 @@ Moduł Query do AxKitu.
 
 %package Language-SAXMachines
 Summary:	SAXMachines module for AxKit - transform content with SAX Filters
-Summary(pl.UTF-8):   Moduł SAXMachines do AxKitu - przepuszczający zawartość przez filtry SAX
+Summary(pl.UTF-8):	Moduł SAXMachines do AxKitu - przepuszczający zawartość przez filtry SAX
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 Requires:	perl-XML-LibXML-SAX >= 1.50
@@ -172,7 +172,7 @@ poprzez dyrektywy konfiguracyjne w plikach .htaccess lub *.conf.
 
 %package Language-Sablot
 Summary:	Sablot module for AxKit
-Summary(pl.UTF-8):   Moduł Sablot do AxKitu
+Summary(pl.UTF-8):	Moduł Sablot do AxKitu
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 
@@ -184,7 +184,7 @@ Moduł Sablot do AxKitu.
 
 %package Language-XMLNews
 Summary:	XMLNews modules for AxKit
-Summary(pl.UTF-8):   Moduły XMLNews do AxKitu
+Summary(pl.UTF-8):	Moduły XMLNews do AxKitu
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 
@@ -196,7 +196,7 @@ Moduły XMLNews (XMLNewsNITF i XMLNewsRDF) do AxKitu.
 
 %package Language-XPathScript
 Summary:	XPathScript language module for AxKit
-Summary(pl.UTF-8):   Moduł języka XPathScript do AxKitu
+Summary(pl.UTF-8):	Moduł języka XPathScript do AxKitu
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 Requires:	perl-XML-Parser >= 2.27
@@ -210,7 +210,7 @@ Moduł języka XPathScript do AxKitu.
 
 %package Language-XSP
 Summary:	XSP language module for AxKit - eXtensible Server Pages
-Summary(pl.UTF-8):   Moduł językowy XSP do AxKitu
+Summary(pl.UTF-8):	Moduł językowy XSP do AxKitu
 Group:		Development/Languages/Perl
 Requires:	%{name} = %{version}-%{release}
 Requires:	perl-XML-LibXML >= 1.50
