@@ -259,10 +259,8 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Apache/AxKit/Provider
 %{perl_vendorarch}/Apache/AxKit/StyleChooser
 %dir %{perl_vendorarch}/auto/AxKit
-%{perl_vendorarch}/auto/AxKit/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/AxKit/*.so
 %dir %{perl_vendorarch}/auto/Apache/AxKit/CharsetConv
-%{perl_vendorarch}/auto/Apache/AxKit/CharsetConv/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Apache/AxKit/CharsetConv/*.so
 %{_mandir}/man3/AxKit.3pm*
 %{_mandir}/man3/Apache::AxKit::[!LP]*
