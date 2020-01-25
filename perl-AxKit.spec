@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test" (requires server)
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Apache
 %define		pnam	AxKit
 %define		_axver	1.62
